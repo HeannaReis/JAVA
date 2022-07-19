@@ -14,7 +14,7 @@ public class Problem {
     	while (leitor.hasNext()) {
     		V = leitor.nextDouble();
     		D = leitor.nextDouble();
-    		R = D / 2;     ;
+    		R = D / 2;
     		area = 3.14 * (R * R);
     		altura = V / (3.14 * ( R * R));
     		System.out.println("ALTURA = " + df.format(altura));
