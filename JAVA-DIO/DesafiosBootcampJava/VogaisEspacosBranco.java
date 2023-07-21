@@ -21,54 +21,7 @@ A saída deverá retornar quantos espaços em branco e quantas vogais existem na
 “Navegar nas aguas do teu mar”  Espacos em branco: 5 Vogais: 11 
 */
 
-import java.util.*;
-public class VogaisEspacosBranco {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
- 
-        String[] strSplit = str.split(" ");
-        Character[] arrVogais = {'a', 'e', 'i', 'o', 'u'};
-        var vogais = Arrays.asList(arrVogais);
- 
-        int espacosEmBranco = strSplit.length - 1, quantVogais = 0;
- 
-        for (String item : strSplit) {
-            var letras = item.toCharArray();
-            for (char x : letras) {
-                if (vogais.contains(Character.toLowerCase(x))) {
-                    quantVogais++;
-                }
-            }
-        } 
-        System.out.println("Espacos em branco: " + espacosEmBranco + " Vogais: " + quantVogais);
-    }
- }
- 
-
-Clean Code    
-import java.util.Scanner;
-
-public class VogaisEspacosBranco {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-
-        String[] strSplit = str.split(" ");
-        String vogais = "aeiouAEIOU";
-
-        int espacosEmBranco = strSplit.length - 1;
-        int quantVogais = 0;
-
-        for (String item : strSplit) {
-            quantVogais += item.chars().filter(c -> vogais.indexOf(c) != -1).count();
-        }
-
-        System.out.println("Espacos em branco: " + espacosEmBranco + " Vogais: " + quantVogais);
-    }
-}
-
-Clean Code Level Hard
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class VogaisEspacosBranco {
@@ -82,4 +35,3 @@ public class VogaisEspacosBranco {
         System.out.println("Espacos em branco: " + espacosEmBranco + " Vogais: " + quantVogais);
     }
 }
-

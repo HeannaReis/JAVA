@@ -11,7 +11,6 @@ Exemplos de Entrada	Exemplos de Saída
 7.1
 
 MEDIA = 6.43182
-
 0.0
 7.1
 
