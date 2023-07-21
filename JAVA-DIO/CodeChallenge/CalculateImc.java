@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class CalculateImc {
     public static void main(String[] args) {
     Scanner scanner = new Scanner (System.in);
+    
+    System.out.println("Calculete IMC");
 
     System.out.println("What's your name?");
     String name = scanner.nextLine();

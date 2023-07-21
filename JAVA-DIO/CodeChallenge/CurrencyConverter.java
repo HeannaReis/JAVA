@@ -3,7 +3,7 @@ import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class currencyConverter {
+public class CurrencyConverter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
