@@ -1,3 +1,8 @@
+import Apps.InstantMessagingService;
+import Apps.Messenger;
+import Apps.Telegram;
+import Apps.WhatsApp;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -5,7 +10,17 @@ public class App {
 
         //Não se sabe qual APP vai ser usado, mas qualquer um deve
         //enviar e receber mensagens !!!
+        String choiceApp = "tlg";
+        
+        if(choiceApp.equals("msn"))
+            ims = new Messenger();
+        else if(choiceApp.equals("tlg"))
+            ims = new Telegram();
+        else if(choiceApp.equals("wts"))
+            ims = new WhatsApp();
 
+        ims.SendMessage();
+        ims.ReceiveMessage();
         
 
         // System.out.println("\nMESSENGER SERVICE");
