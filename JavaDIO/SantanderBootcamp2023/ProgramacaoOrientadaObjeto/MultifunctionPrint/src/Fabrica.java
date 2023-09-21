@@ -9,7 +9,6 @@ public class Fabrica {
         Digitalizadora digitalizadora = new Multifuncional();
         Copiadora copiadora = new Multifuncional();
 
-
         impressora.imprimir();
         digitalizadora.digitalizar();
         copiadora.copiar();
