@@ -1,8 +1,9 @@
+package StreamApi.FunctionExample;
 import java.util.Arrays;
 import java.util.List;
 //import java.util.function.Function;
 
-public class FunctionExemple {
+public class FunctionExample {
     public static void main(String[] args) {
         // Criar uma lista de números inteiros
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5);
