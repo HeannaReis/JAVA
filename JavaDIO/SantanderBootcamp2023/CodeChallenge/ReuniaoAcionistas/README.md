@@ -18,6 +18,6 @@ Uma lista contendo as análises de desempenho financeiro realizadas dentro do pe
 |             |
 | 05/03/2023  | Analises Comporativas
 | 05/04/2023  |	Analise de Politicas e Regulamentacoes
-|
+| |
 | 05/01/2023  | Analise de Riscos e Exposicoes
 | 03/03/2023  |
