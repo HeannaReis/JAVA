@@ -1,5 +1,7 @@
 package DesafioPOO;
 
+import DesafioPOO.Iphone.NewIphone;
+
 public class MeuTelefone {
     public static void main(String[] args) {
         NewIphone newIphone = new NewIphone();
