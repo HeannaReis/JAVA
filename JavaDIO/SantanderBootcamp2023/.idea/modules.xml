@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CodeChallenge/CodeChallenge.iml" filepath="$PROJECT_DIR$/CodeChallenge/CodeChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ContaBanco/ContaBanco.iml" filepath="$PROJECT_DIR$/ContaBanco/ContaBanco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgramacaoOrientadaObjeto/MessengerServices/MessengerServices.iml" filepath="$PROJECT_DIR$/ProgramacaoOrientadaObjeto/MessengerServices/MessengerServices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgramacaoOrientadaObjeto/MultifunctionPrint/MultifunctionPrint.iml" filepath="$PROJECT_DIR$/ProgramacaoOrientadaObjeto/MultifunctionPrint/MultifunctionPrint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SantanderBootcamp2023.iml" filepath="$PROJECT_DIR$/SantanderBootcamp2023.iml" />
+    </modules>
+  </component>
+</project>
