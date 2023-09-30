@@ -26,4 +26,4 @@ Com base no vídeo de lançamento do iPhone conforme link abaixo, elabore em uma
 
 ### Diagrama do Iphone
 
-![Diagrama](./assets/img/DiagramaIphone.png)
+![Diagrama](./assets/img/DiagramaIphone1.png)
