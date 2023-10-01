@@ -29,10 +29,10 @@ Com base no vídeo de lançamento do iPhone conforme link abaixo, elabore em uma
 ```mermaid
 classDiagram
     class IControleVolume {
-        +aumentarVolume()
-        +diminuirVolume()
-        +getVolume(): int
-        +setVolume(novoVolume: int)
+        + aumentarVolume()
+        + diminuirVolume()
+        + getVolume(): int
+        + setVolume(novoVolume: int)
     }
     
     class ReprodutorMidias {
@@ -55,15 +55,19 @@ classDiagram
     
     class ControleDeVolumeImpl {
         -volume: int
-        +ControleDeVolumeImpl()
-        +aumentarVolume()
-        +diminuirVolume()
+        + ControleDeVolumeImpl()
+        + aumentarVolume()
+        + diminuirVolume()
         +getVolume(): int
-        +setVolume(novoVolume: int)
+        +  setVolume(novoVolume: int)
     }
     
     class NewIphone {
         - controleDeVolume: ControleDeVolumeImpl
+        + aumentarVolume()
+        + diminuirVolume()
+        + getVolume(): int
+        + setVolume(novoVolume: int)
         + selecionarMidia(midia)
         + reproduzirMidia()
         + pausarMidia()
@@ -81,4 +85,3 @@ classDiagram
     ChamadaTelefonica <|-- NewIphone
     NewIphone --> ControleDeVolumeImpl : possui
 
-```
