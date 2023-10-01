@@ -17,6 +17,11 @@ public class MeuTelefone {
         newIphone.diminuirVolume();
         System.out.println("Volume após diminuir: " + newIphone.getVolume());
 
+        System.out.println("Definindo Novo Volume ");
+        newIphone.setVolume(75); // Definir o volume para 75
+        System.out.println("Volume após definir: " + newIphone.getVolume());
+
+
         System.out.println("\nIniciando Serviço Chamada Telefônica");
         newIphone.efetuarLigacao();
         System.out.println("Efetuando Ligacao!");
@@ -48,5 +53,5 @@ public class MeuTelefone {
         System.out.println("Pausando Midia!");
 
     }
-    
+
 }

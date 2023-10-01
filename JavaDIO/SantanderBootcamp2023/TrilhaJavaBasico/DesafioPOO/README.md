@@ -26,4 +26,59 @@ Com base no vídeo de lançamento do iPhone conforme link abaixo, elabore em uma
 
 ### Diagrama do Iphone
 
-![Diagrama](./assets/img/DiagramaIphone1.png)
+```mermaid
+classDiagram
+    class IControleVolume {
+        +aumentarVolume()
+        +diminuirVolume()
+        +getVolume(): int
+        +setVolume(novoVolume: int)
+    }
+    
+    class ReprodutorMidias {
+        + selecionarMidia(midia)
+        + reproduzirMidia()
+        + pausarMidia()
+    }
+    
+    class NavegadorInternet {
+        + exibirPagina()
+        + adicionarNovaAba()
+        + atualizarPagina()
+    }
+    
+    class ChamadaTelefonica {
+        + efetuarLigacao()
+        + atenderLigacao()
+        + iniciarCorreioDeVoz()
+    }
+    
+    class ControleDeVolumeImpl {
+        -volume: int
+        +ControleDeVolumeImpl()
+        +aumentarVolume()
+        +diminuirVolume()
+        +getVolume(): int
+        +setVolume(novoVolume: int)
+    }
+    
+    class NewIphone {
+        - controleDeVolume: ControleDeVolumeImpl
+        + selecionarMidia(midia)
+        + reproduzirMidia()
+        + pausarMidia()
+        + exibirPagina()
+        + adicionarNovaAba()
+        + atualizarPagina()
+        + efetuarLigacao()
+        + atenderLigacao()
+        + iniciarCorreioDeVoz()
+    }
+    
+    IControleVolume <|-- ControleDeVolumeImpl
+    ReprodutorMidias <|-- NewIphone
+    NavegadorInternet <|-- NewIphone
+    ChamadaTelefonica <|-- NewIphone
+    NewIphone --> ControleDeVolumeImpl : possui
+
+```

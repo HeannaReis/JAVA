@@ -24,4 +24,11 @@ public class ControleDeVolumeImpl implements IControleDeVolume {
     public int getVolume() {
         return volume;
     }
+
+    @Override
+    public void setVolume(int novoVolume) {
+        if (novoVolume >= 0 && novoVolume <= 100) {
+            volume = novoVolume;
+        }
+    }
 }

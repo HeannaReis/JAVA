@@ -26,6 +26,12 @@ public class NewIphone implements IChamadaTelefonica, IControleDeVolume, INavega
     public int getVolume() {
         return controleDeVolume.getVolume();
     }
+    
+    @Override
+    public void setVolume(int novoVolume) {
+        controleDeVolume.setVolume(novoVolume);
+    }
+
 
     // Métodos para utilizar a Interface IChamadaTelefonica
     @Override
@@ -60,7 +66,7 @@ public class NewIphone implements IChamadaTelefonica, IControleDeVolume, INavega
 
     @Override
     public void selecionarMidia() {
-
+        
     }
 
     @Override
@@ -72,5 +78,4 @@ public class NewIphone implements IChamadaTelefonica, IControleDeVolume, INavega
     public void pausarMidia() {
 
     }
-
 }
