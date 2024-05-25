@@ -9,17 +9,15 @@ import java.util.function.Consumer;
 public class ReuniaoAcionistas2 {
 
     public static void main(String[] args) throws ParseException {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)){
         String dataInicialStr = scanner.nextLine();
         String dataFinalStr = scanner.nextLine();
 
         SistemaAcionistas sistemaAcionistas = new SistemaAcionistas();
         sistemaAcionistas.processarAnalisesDesempenho(dataInicialStr, dataFinalStr, System.out::println);
-
-        scanner.close();
+        }
     }
 }
-
 class SistemaAcionistas {
     public void processarAnalisesDesempenho(String dataInicialStr, String dataFinalStr, Consumer<String> consumer) throws ParseException {
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");

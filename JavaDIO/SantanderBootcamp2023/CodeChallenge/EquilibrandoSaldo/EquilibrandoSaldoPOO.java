@@ -20,16 +20,22 @@ class ContaBancaria {
     }
 }
 
-public class EquilibrandoSaldo {
+public class EquilibrandoSaldoPOO {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             double saldoAtual = scanner.nextDouble();
+
             ContaBancaria conta = new ContaBancaria(saldoAtual);
 
-            conta.depositar(scanner.nextDouble());
-            conta.retirar(scanner.nextDouble());
+            double valorDeposito = scanner.nextDouble();
+            conta.depositar(valorDeposito);
 
-            System.out.printf("Saldo atualizado na conta: %.1f%n", conta.getSaldo());
+            double valorRetirada = scanner.nextDouble();
+            conta.retirar(valorRetirada);
+
+            double saldoAtualizado = conta.getSaldo();
+
+            System.out.printf("Saldo atualizado na conta: %.1f%n", saldoAtualizado);
         }
     }
 }

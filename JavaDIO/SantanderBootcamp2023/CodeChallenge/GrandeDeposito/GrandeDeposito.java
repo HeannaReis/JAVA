@@ -1,20 +1,18 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class GrandeDeposito {
     public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            double valor = scanner.nextDouble();
 
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-        double valor = scanner.nextDouble();
+            DecimalFormat df = new DecimalFormat("0.00");
 
-        if (valor > 0) {
-            System.out.format("Deposito realizado com sucesso!\nSaldo atual: R$ %.2f", valor);
-        } else if (valor == 0) {
-            System.out.println("Encerrando o programa...");
-        } else {
-            System.out.println("Valor invalido! Digite um valor maior que zero.");
+            String mensagem = (valor > 0)
+                ? "Deposito realizado com sucesso!\nSaldo atual: R$ " + df.format(valor)
+                : (valor == 0) ? "Encerrando o programa..." : "Valor invalido! Digite um valor maior que zero.";
+
+            System.out.println(mensagem);
         }
-        scanner.close();
     }
-    
 }

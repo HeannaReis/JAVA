@@ -2,20 +2,15 @@ import java.util.Scanner;
 
 public class CondicionalmenteRico {
     public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            int saldoTotal = scanner.nextInt();
+            int valorSaque = scanner.nextInt();
 
-        // Entrada de dados
-        Scanner scanner = new Scanner(System.in);
-        int saldoTotal = scanner.nextInt();
-        int valorSaque = scanner.nextInt();
+            String mensagem = (valorSaque <= saldoTotal)
+                    ? "Saque realizado com sucesso. Novo saldo: " + (saldoTotal - valorSaque)
+                    : "Saldo insuficiente. Saque não realizado!";
 
-        // TODO: Criar as condições necessárias para impressão da saída, vide tabela de
-        // exemplos.
-        if (valorSaque <= saldoTotal) {
-            saldoTotal -= valorSaque;
-            System.out.println("Saque realizado com sucesso. Novo saldo: " + saldoTotal);
-        } else {
-            System.out.println("Saldo insuficiente. Saque nao realizado!");
+            System.out.println(mensagem);
         }
-        scanner.close();
     }
 }

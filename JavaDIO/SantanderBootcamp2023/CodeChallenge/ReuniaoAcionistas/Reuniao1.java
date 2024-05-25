@@ -1,28 +1,29 @@
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
-import java.util.function.Consumer;
 
 public class Reuniao1 {
 
     public static void main(String[] args) throws ParseException {
-        Scanner scanner = new Scanner(System.in);
-        String dataInicialStr = scanner.nextLine();
-        String dataFinalStr = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            String dataInicial = scanner.nextLine();
+            String dataFinal = scanner.nextLine();
 
-        SistemaAcionistas sistemaAcionistas = new SistemaAcionistas();
-        sistemaAcionistas.processarAnalisesDesempenho(dataInicialStr, dataFinalStr, System.out::println);
+            SistemaAcionistas sistemaAcionistas = new SistemaAcionistas();
+            List<String> analises = sistemaAcionistas.obterAnalisesDesempenho(dataInicial, dataFinal);
 
-        scanner.close();
+            for (String analise : analises) {
+                System.out.println(analise);
+            }
+        }
     }
 }
 
 class SistemaAcionistas {
-    public void processarAnalisesDesempenho(String dataInicialStr, String dataFinalStr, Consumer<String> consumer) throws ParseException {
+    public List<String> obterAnalisesDesempenho(String dataInicialStr, String dataFinalStr) throws ParseException {
         SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date dataInicial = df.parse(dataInicialStr);
         Date dataFinal = df.parse(dataFinalStr);
@@ -35,10 +36,15 @@ class SistemaAcionistas {
         analises.add(new Analise(df.parse("15/05/2023"), "Analise de Ativos"));
         analises.add(new Analise(df.parse("30/06/2023"), "Analise de Inovacao e Tecnologia"));
 
-        analises.stream()
-            .filter(analise -> !analise.data.before(dataInicial) && !analise.data.after(dataFinal))
-            .map(analise -> analise.descricao)
-            .forEach(consumer);
+        List<String> analisesFiltradas = new ArrayList<>();
+
+        for (Analise analise : analises) {
+            if (!analise.data.before(dataInicial) && !analise.data.after(dataFinal)) {
+                analisesFiltradas.add(analise.descricao);
+            }
+        }
+
+        return analisesFiltradas;
     }
 }
 
